@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora 13° Salário</title>
+    <link rel="shortcut icon" type="imagex/png" href="img/shortcut.png">
+    <!-- Bootstrap 5.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Javascrip The Calculater -->
+    <script src="js/calculator.js"></script>
+    <!-- Javascrip The Calculater 13 Salário -->
+    <script src="js/calculator-13-salario.js"></script>
+  </head>
+<body>
+ <nav class="navbar navbar-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Calculadora</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li><a class="nav-link active" href="13salario.html">13º Salário</a></li>
+            <li><a class="nav-link" href="ferias.html">Férias</a></li>
+            <li><a class="nav-link" href="fgts.html">FGTS</a></li>
+            <li><a class="nav-link" href="horas-extras.html">Horas Extras</a></li>
+            <li><a class="nav-link" href="horas-trabalhadas.html">Horas Trabalhadas</a></li>
+            <li><a class="nav-link" href="inss.html">INSS</a></li>
+            <li><a class="nav-link" href="irrf.html">IRRF</a></li>
+            <li><a class="nav-link" href="adicional-noturno.html">Adicional Noturno</a></li>
+            <li><a class="nav-link" href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+  <header class="mt-5">
+    <!-- BreadCrumb -->
+    <nav aria-label="breadcrumb" class="ps-5">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Calculadora</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="13salario.html">13° Salário</a></li>
+      </ol>
+    </nav>
+  </header>
+  <main class="text-center p-2">
+     <div class="modal fade" id="meuModal" tabindex="-1">
+<div class="modal-dialog p-0">
+  <div class="modal-content p-0 m-0">
+    
+    <div class="modal-header m-0">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <div class="modal-body text-justify lh-2 p-3 m-0">
+      <p>
+        Estamos procurando sempre estar atualizando e corrigindo possiveis falhas em nossos cálculos e sistema,
+        procurando entregar o que é de melhor ao nosso usuário. Caso tenha identificado alguma informação
+        erronea ou erro de cálculo, não excite em nos informar para corrigirmos o quanto antes.
+      </p>
+    </div>
+
+    <div class="modal-footer p-2 m-0">
+      <a href="contato.html" class="btn btn-danger">Informar falhas</a>
+      <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fechar</button>
+    </div>
+
+  </div>
+</div>
+    </div>
+    <section class="mb-5">
+      <header class="text-center">
+        <h2 class="fw-bold">Calcule seu Décimo Terceiro Salário ✨</h2>
+      </header>
+      <div class="d-flex justify-content-center">
+        <form class="container-calc-13-ferias">
+          
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-2">
+                <label class="form-label fw-bold m-0">Salário Bruto</label>
+                 <div class="input-group input-group-sm">
+                    <span class="input-group-text bg-danger">R$</span>
+                    <input id="salario_bruto" type="text" class="moeda form-control bg-danger text-start" placeholder="0,00" required/>
+                    <!--<input id="salario_bruto" type="number" step="0.01" class="form-control bg-danger text-start" placeholder="1518,00" required/>-->
+                  </div>
+                <div id="emailHelp" class="form-text text-start lh-1">Salário bruto é aquele que consta como registrado na CTPS, sem considerar os descontos legais como o INSS e IR.</div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="mb-2">
+                <label class="form-label fw-bold m-0">Meses Trabalhados</label>
+                <select id="meses_trabalhados" class="form-control form-control-sm bg-danger" aria-label="Default select example" required>
+                  <option selected>Selecione a qntd de meses trabalhados:</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                <div id="emailHelp" class="form-text text-start lh-1">Conforme o Tribunal Superior do Trabalho, é considerado um mês de trabalho a partir de 15 dias ou mais trabalhados.</div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="mb-2">
+                <label class="form-label fw-bold m-0">Valor em média de horas extras</label>
+                <div class="input-group input-group-sm">
+                    <span class="input-group-text bg-danger">R$</span>
+                    <input id="valor_horas_extras" type="text" step="0.01" class="form-control bg-danger text-start" placeholder="200,00" required/>
+                  </div>
+                
+                <div id="emailHelp" class="form-text text-start lh-1">Informe a média mensal do valor. Caso não realize horas extras, desconsidere este campo.</div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="mb-2">
+            <label class="form-label fw-bold m-0">Qual parcela você deseja calcular?</label>
+            <select id="num_parcelas" class="form-control form-control-sm bg-danger" aria-label="Default select example" required>
+              <option selected>Selecione o número de parcelas:</option>
+              <option value="1">Primeira parcela</option>
+              <option value="2">Segunda parcela</option>
+              <option value="unica">Parcela única</option>
+            </select>
+             <div id="emailHelp" class="form-text text-start lh-1">Os descontos em parcelas separadas é realizado na segunda parcela. </div>
+          </div>
+            </div>
+          </div>
+          
+          
+          
+          
+          
+          <div class="d-flex justify-content-center mt-4 mb-4">
+            <button type="button" class="btn btn-dark" onclick="calcular_13_salario()">Calcular</button>
+          </div>
+          <!-- Campo de resultado -->
+          <div id="resultado_tabela" style="display:none;" class="table-rounded  mb-2">
+            <table class="table table-13salario table-danger table-striped text-start">
+              <thead>
+                <tr>
+                  <th scope="col">Descrição</th>
+                  <th scope="col">Alíquota</th>
+                  <th scope="col">Proventos</th>
+                  <th scope="col">Descontos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Valor bruto do 13º</th>
+                  <td></td>
+                  <td id="salario_bruto_result"></td>
+                  <td></td>
+                  
+                </tr>
+                 <tr>
+                  <th scope="row">Horas extras</th>
+                  <td></td>
+                  <td></td>
+                  <td id="resultado_horas_extras"></tr>
+                </tr>
+                <tr>
+                  <th scope="row">INSS</th>
+                  <td><p id="resultado_aliquota_tabela" style="display:none">9%</p></td>
+                  <td></td>
+                  <td id="valor_final"></tr>
+                </tr>
+                    
+                 <tr>
+                  <th scope="row">Total</th>
+                  <td></td>
+                  <td id="total_proventos" class="text-success"></td>
+                  <td id="total_descontos" class="text-danger"></tr>
+                
+                </tr>
+              </tbody>
+            </table>
+             <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Total do valor Líquido:</th>
+                 
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th  id="resultado_13_salario" class="text-success" scope="row"></th>
+                  </tr>
+              </tbody>
+            </table>
+            <p class="form-text lh-1 p-0 m-0">Os resultados presentes aqui são estimativas, e podem variar de acordo com possíveis mudanças nas taxas. Esta calculadora foi feita apenas para facilitar a sua consulta e, portanto, não possui valor legal.</p>
+           </div>
+        </form>
+      </div>
+    </section>
+    <section class="text-justify text-justify p-2 text-md-justify p-3 mx-auto col-12 col-md-8 col-lg-6">
+        <section class="text-justify">
+          <!-- Como é feito o cálculo do 13º Salário? -->
+          <header>
+            <h2 class="text-center fw-bold">Como é feito o cálculo do 13º Salário?</h2>
+          </header>
+          <article>
+            <p>
+              O cálculo do 13º é bastante simples: divide-se o salário bruto por 12 e multiplica-se pelo número de meses trabalhados no ano. 
+              Cada mês trabalhado equivale a <span class="fw-bold">1/12 do salário</span>. Por exemplo, quem trabalhou 6 meses recebe metade do salário como 13º.
+            </p>
+          </article>
+        </section>
+        <!-- Ideal para Trabalhadores e Empregadores -->
+          <header>
+          <h2 class="text-center fw-bold">Ideal para Trabalhadores e Empregadores</h2>
+        </header>
+        <article>
+          <p>
+            O 13º salário, também conhecido como gratificação natalina, é um direito garantido por lei a todos os trabalhadores com carteira assinada no Brasil. 
+            Ele representa uma remuneração extra ao final do ano, equivalente a <span class="fw-bold">1/12 do salário por mês trabalhado</span>.
+            Com a nossa Calculadora de 13º Salário, você pode descobrir de forma simples e rápida quanto vai receber — basta informar seu salário e o número de meses trabalhados.
+          </p>
+        </article>
+    </section>
+    <section class="text-justify text-justify p-2 text-md-justify p-3 mx-auto col-12 col-md-8 col-lg-6">
+        <!-- Por que usar nossa Calculadora Online? -->
+        <header>
+          <h2 class="text-center fw-bold">Por que usar nossa Calculadora Online? 👌</h2>
+        </header>
+        <article>
+         
+          <ul>
+            <li class="open"><span class="fw-bold">Simples e intuitiva: </span>Interface limpa e fácil de entender.</li>
+            <li class="open"><span class="fw-bold">Rápida: </span>Resultados instantâneos, sem precisar baixar nada.</li>
+            <li class="open"><span class="fw-bold">Gratuita: </span>100% online e sem custos.</li>
+            <li class="open"><span class="fw-bold">Responsiva: </span>Funciona perfeitamente no celular, tablet ou computador.</li>
+            <li class="open"><span class="fw-bold">Segura: </span>Seus cálculos não são armazenados.</li>
+          </ul>
+           <p>
+            Essa ferramenta foi criada para facilitar o entendimento do cálculo, permitindo que você tenha mais controle sobre suas finanças e saiba o valor exato que tem direito a receber, sem precisar fazer contas manuais ou depender de planilhas complexas.
+          </p>
+        </article>
+    </section>
+    
+    
+  </main>
+  <section class="referencias p-2 text-justify p-2 text-md-justify p-3 mx-auto col-12 col-md-8 col-lg-6">
+    <header>
+      <h2 class="text-center fw-bold">Referências</h2>
+    </header>
+    <div class="row">
+      <div class="col-sm-6 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title p-0 m-0">Serasa</h5>
+            <p class="card-text pb-0 mb-1">Ferramenta financeira da Serasa que ajuda a calcular o valor do seu décimo terceiro salário sem erros.</p>
+            <a href="https://www.serasa.com.br/calculadoras/calculadora-decimo-terceiro/?gad_source=1&gad_campaignid=22395464850&gbraid=0AAAAADFxu1b9IPYo3EKGpyVG2fxfNaN2x&gclid=Cj0KCQiA5abIBhCaARIsAM3-zFWy3yyDsT6hYnH7Xnf_IhsCkQ6pcpt8v5w2HGsgvC_fGDdR9x4QSEMaAnffEALw_wcB"  target="_blank" rel="noopener noreferrer" class="btn btn-danger">Entrar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title  p-0 m-0">Cálculo Juridico</h5>
+            <p class="card-text pb-0 mb-1">Calcule o valor das parcelas do décimo terceiro devidas, já considerando os descontos de INSS, IRRF e pensão.</p>
+            <a href="https://calculojuridico.com.br/calculadora-decimo-terceiro-salario/"  target="_blank" rel="noopener noreferrer" class="btn btn-danger">Entrar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer>
+    <!-- Footer -->
+    <section class="text-center">
+      <p>The Calculator by The Calculator<br>2025</p>
+    </section>
+  </footer>
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var meuModal = new bootstrap.Modal(document.getElementById("meuModal"));
+    meuModal.show();
+  });
+</script>
+    <!-- Bundle Bootstrap 5.0 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

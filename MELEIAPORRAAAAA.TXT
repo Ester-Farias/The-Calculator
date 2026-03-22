@@ -1,0 +1,12 @@
+1. Fazer layout modo tablet/Desktop    OKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+2. Fazer a página Contato    OKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+3. Fazer a função do menu ficar fixo ao escrollar para baixo    OKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+4. Fazer a função da calculadora da primeira página.    OKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+5. Fazer a função da calculadora da segunda página (13 Salário)  OKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+6. Fazer a função da calculadara da terceira página (Férias)
+7. Fazer a função da calculadora da quarta página (FGTS)
+8. Fazer a função da calculadora da quinta página (Horas Extras)
+9. Fazer a função da calculadora da sexta página (INSS)
+10. Fazer a função da calculadora da sétima página (IRRF)
+11. Fazer a função da calculadora da oitava página (Adicional Noturno)
+12. Fazer a função da calculadora da nona página (Rescição)

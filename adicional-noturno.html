@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Adicional Noturno</title>
+    <link rel="shortcut icon" type="imagex/png" href="img/shortcut.png">
+    <!-- Bootstrap 5.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Javascrip The Calculater -->
+    <script src="js/calculator-adicional-noturno.js"></script>
+</head>
+<body>
+ <nav class="navbar navbar-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Calculadora</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li><a class="nav-link" href="13salario.html">13º Salário</a></li>
+            <li><a class="nav-link" href="ferias.html">Férias</a></li>
+            <li><a class="nav-link" href="fgts.html">FGTS</a></li>
+            <li><a class="nav-link" href="horas-extras.html">Horas Extras</a></li>
+            <li><a class="nav-link" href="horas-trabalhadas.html">Horas Trabalhadas</a></li>
+            <li><a class="nav-link" href="inss.html">INSS</a></li>
+            <li><a class="nav-link" href="irrf.html">IRRF</a></li>
+            <li><a class="nav-link active" href="adicional-noturno.html">Adicional Noturno</a></li>
+            <li><a class="nav-link" href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+
+  <header class="mt-5">
+      <!-- BreadCrumb -->
+       <nav aria-label="breadcrumb" class="ps-5">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Calculadora</a></li>
+          <li class="breadcrumb-item active" aria-current="page"><a href="adicional-noturno.html">Adicional Noturno</a></li>
+       
+        </ol>
+        </nav>
+  </header>
+<div class="modal fade" id="meuModal" tabindex="-1">
+<div class="modal-dialog p-0">
+  <div class="modal-content p-0 m-0">
+    
+    <div class="modal-header m-0">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <div class="modal-body text-justify lh-2 p-3 m-0">
+      <p>
+        Estamos procurando sempre estar atualizando e corrigindo possiveis falhas em nossos cálculos e sistema,
+        procurando entregar o que é de melhor ao nosso usuário. Caso tenha identificado alguma informação
+        erronea ou erro de cálculo, não excite em nos informar para corrigirmos o quanto antes.
+      </p>
+    </div>
+
+    <div class="modal-footer p-2 m-0">
+      <a href="contato.html" class="btn btn-danger">Informar falhas</a>
+      <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fechar</button>
+    </div>
+
+  </div>
+</div>
+    </div>
+  <section class="referencias p-2 text-justify p-2 text-md-justify p-3 mx-auto col-12 col-md-8 col-lg-6">
+    <header>
+      <h2 class="text-center fw-bold">Referências</h2>
+    </header>
+    <div class="row">
+      <div class="col-sm-6 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title p-0 m-0">Santander</h5>
+            <p class="card-text pb-0 mb-1">Entenda como essa remuneração funciona, quem tem direito, além de aprender a calcular o valor adicional no seu salário.</p>
+            <a href="https://www.santander.com.br/blog/adicional-noturno" target="_blank" rel="noopener noreferrer" class="btn btn-danger">Entrar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title  p-0 m-0">JusBrasil</h5>
+            <p class="card-text pb-0 mb-1">Saiba o valor do adicional noturno, divida o Salário Base Mensal pelas Horas Contratuais, e depois multiplique o valor da Hora Normal.</p>
+            <a href="https://www.jusbrasil.com.br/noticias/aprenda-a-calcular-adicional-noturno/410516176" target="_blank" rel="noopener noreferrer" class="btn btn-danger">Entrar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <!-- Footer -->
+    <section class="text-center">
+      <p>The Calculator by The Calculator<br>2025</p>
+    </section>
+  </footer>
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var meuModal = new bootstrap.Modal(document.getElementById("meuModal"));
+    meuModal.show();
+  });
+</script>
+    <!-- Bundle Bootstrap 5.0 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

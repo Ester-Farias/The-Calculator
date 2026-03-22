@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Calculator</title>
+    <link rel="shortcut icon" type="imagex/png" href="img/shortcut.png" />
+    <!-- Bootstrap 5.0 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+    <!-- Css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet" />
+    <!-- Javascrip The Calculater -->
+    <script src="js/calculator.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Calculadora</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li><a class="nav-link" href="13salario.html">13º Salário</a></li>
+            <li><a class="nav-link" href="ferias.html">Férias</a></li>
+            <li><a class="nav-link" href="fgts.html">FGTS</a></li>
+            <li>
+              <a class="nav-link" href="horas-extras.html">Horas Extras</a>
+            </li>
+            <li>
+              <a class="nav-link" href="horas-trabalhadas.html"
+                >Horas Trabalhadas</a
+              >
+            </li>
+            <li><a class="nav-link" href="inss.html">INSS</a></li>
+            <li><a class="nav-link" href="irrf.html">IRRF</a></li>
+            <li>
+              <a class="nav-link" href="adicional-noturno.html"
+                >Adicional Noturno</a
+              >
+            </li>
+            <li><a class="nav-link" href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="mt-5">
+      <!-- BreadCrumb -->
+      <nav aria-label="breadcrumb" class="ps-5">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">
+            <a href="index.html">Calculadora</a>
+          </li>
+        </ol>
+      </nav>
+    </header>
+    <div class="modal fade" id="meuModal" tabindex="-1">
+<div class="modal-dialog p-0">
+  <div class="modal-content p-0 m-0">
+    
+    <div class="modal-header m-0">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <div class="modal-body text-justify lh-2 p-3 m-0">
+      <p>
+        Estamos procurando sempre estar atualizando e corrigindo possiveis falhas em nossos cálculos e sistema,
+        procurando entregar o que é de melhor ao nosso usuário. Caso tenha identificado alguma informação
+        erronea ou erro de cálculo, não excite em nos informar para corrigirmos o quanto antes.
+      </p>
+    </div>
+
+    <div class="modal-footer p-2 m-0">
+      <a href="contato.html" class="btn btn-danger">Informar falhas</a>
+      <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fechar</button>
+    </div>
+
+  </div>
+</div>
+    </div>
+  </div>
+    </div>
+    <main class="text-center p-2">
+      <section class="mb-5">
+        <header>
+          <h2 class="fw-bold">Calculadora</h2>
+        </header>
+        <div class="d-flex justify-content-center">
+          <div class="">
+            <form class="container-calc p-0">
+              <!-- Campo de resultado -->
+              <input id="resultado" type="text" class="form-control bg-dark text-white text-end" readonly />
+              <!-- Grade de botões -->
+              <div class="calc-grid">
+                <button type="button" class="btn btn-danger btn-calc" onclick="insert('(')"> ( </button>
+                <button type="button" class="btn btn-danger btn-calc" onclick="insert(')')"> ) </button>
+                <button type="button" class="btn btn-danger btn-calc" onclick="back('C')"> C </button>
+                <button type="button" class="btn btn-danger btn-calc" onclick="insert('/')"> / </button>
+                <button type="button" class="btn btn-danger btn-calc" onclick="insert('7')"> 7 </button>
+                <button type="button" class="btn btn-danger btn-calc" onclick="insert('8')"> 8 </button>
+                <button type="button" class="btn btn-danger btn-calc" onclick="insert('9')"> 9 </button>
+                <button type="button" class="btn btn-danger btn-calc" onclick="insert('*')"> x </button>
+
+                <button type="button" class="btn btn-danger btn-calc" onclick="insert('4')"> 4 </button>
+                <button type="button" class="btn btn-danger btn-calc" onclick="insert('5')"> 5 </button>
+                <button type="button" class="btn btn-danger btn-calc" onclick="insert('6')"> 6 </button>
+                <button type="button" class="btn btn-danger btn-calc" onclick="insert('-')"> - </button>
+
+                <button type="button" class="btn btn-danger btn-calc" onclick="insert('1')"> 1 </button>
+                <button type="button" class="btn btn-danger btn-calc" onclick="insert('2')"> 2 </button>
+                <button type="button" class="btn btn-danger btn-calc" onclick="insert('3')"> 3 </button>
+                <button type="button" class="btn btn-danger btn-calc" onclick="insert('+')"> + </button>
+
+                <button type="button" class="btn btn-danger btn-calc" onclick="insert('.')"> . </button>
+                <button type="button" class="btn btn-danger btn-calc" onclick="insert('0')"> 0 </button>
+
+                <button type="button" class="btn btn-danger btn-calc" onclick="clean()"> CE </button>
+
+                <button type="button" class="btn btn-dark btn-calc" onclick="calcular()"> = </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section
+        class="text-justify p-2 text-md-justify p-3 mx-auto col-12 col-md-8 col-lg-6">
+        <!-- Sobre a calculadora -->
+        <header>
+          <h2 class="text-center fw-bold">
+            Fácil, Rápida e Completa para Quem Ama Matemática
+          </h2>
+        </header>
+        <article>
+          <p>
+            Bem-vindo à sua Calculadora Online gratuita, desenvolvida
+            especialmente para quem gosta de resolver cálculos, explorar a
+            matemática ou simplesmente precisa de uma ferramenta prática e
+            precisa para o dia a dia. Com esta calculadora digital, você pode
+            realizar operações básicas como
+            <span class="fw-bold"
+              >adição (+), subtração (-), multiplicação (×) e divisão (÷)</span
+            >, tudo de forma rápida e sem complicação. Ideal para estudantes,
+            professores, profissionais e entusiastas da matemática que buscam
+            uma forma simples de fazer contas diretamente pelo navegador.
+          </p>
+        </article>
+      </section>
+      <section
+        class="text-justify text-md-justify p-3 mx-auto col-12 col-md-8 col-lg-6">
+        <!-- Sobre a calculadora -->
+        <header>
+          <h2 class="text-center fw-bold">
+            Por que usar nossa Calculadora Online? 👌
+          </h2>
+        </header>
+        <article>
+          <ul>
+            <li class="open">
+              <span class="fw-bold">Simples e intuitiva: </span>Interface limpa
+              e fácil de entender.
+            </li>
+            <li class="open">
+              <span class="fw-bold">Rápida: </span>Resultados instantâneos, sem
+              precisar baixar nada.
+            </li>
+            <li class="open">
+              <span class="fw-bold">Gratuita: </span>100% online e sem custos.
+            </li>
+            <li class="open">
+              <span class="fw-bold">Responsiva: </span>Funciona perfeitamente no
+              celular, tablet ou computador.
+            </li>
+            <li class="open">
+              <span class="fw-bold">Segura: </span>Seus cálculos não são
+              armazenados.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section
+        class="text-justify text-md-justify p-3 mx-auto col-12 col-md-8 col-lg-6">
+        <!-- Sobre a calculadora -->
+        <header>
+          <h2 class="text-center fw-bold">
+            Ideal para estudantes e curiosos em matemática
+          </h2>
+        </header>
+        <article>
+          <p>
+            Se você gosta de descobrir padrões numéricos, fazer exercícios de
+            cálculo mental ou apenas conferir o resultado de uma operação, esta
+            calculadora é perfeita para você. Além de ser uma ferramenta
+            prática, ela pode ajudar no aprendizado de matemática, estimulando o
+            raciocínio lógico e a agilidade nos cálculos.
+          </p>
+        </article>
+      </section>
+      <section
+        class="text-justify text-md-justify p-3 mx-auto col-12 col-md-8 col-lg-6">
+        <!-- Sobre a calculadora -->
+        <header>
+          <h2 class="text-center fw-bold">Use em qualquer lugar</h2>
+        </header>
+        <article>
+          <p>
+            Não importa se você está na escola, no trabalho ou em casa — basta
+            acessar nossa calculadora matemática online e começar a fazer contas
+            em segundos. Compatível com todos os navegadores e dispositivos, ela
+            é ideal para quem precisa de precisão e praticidade.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="text-md-justify p-3 mx-auto col-12 col-md-8 col-lg-6">
+      <!-- Footer -->
+      <section class="text-center">
+        <p>The Calculator by The Calculator<br />2025</p>
+      </section>
+    </footer>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var meuModal = new bootstrap.Modal(document.getElementById("meuModal"));
+    meuModal.show();
+  });
+</script>
+    <!-- Bundle Bootstrap 5.0 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

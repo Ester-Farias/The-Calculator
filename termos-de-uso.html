@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Termos de Uso</title>
+    <link rel="shortcut icon" type="imagex/png" href="img/shortcut.png" />
+    <!-- Bootstrap 5.0 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+    <!-- Css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet" />
+    <!-- Javascrip The Calculater -->
+    <script src="js/calculator.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Calculadora</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li><a class="nav-link" href="13salario.html">13º Salário</a></li>
+            <li><a class="nav-link" href="ferias.html">Férias</a></li>
+            <li><a class="nav-link" href="fgts.html">FGTS</a></li>
+            <li>
+              <a class="nav-link" href="horas-extras.html">Horas Extras</a>
+            </li>
+            <li>
+              <a class="nav-link" href="horas-trabalhadas.html"
+                >Horas Trabalhadas</a
+              >
+            </li>
+            <li><a class="nav-link" href="inss.html">INSS</a></li>
+            <li><a class="nav-link" href="irrf.html">IRRF</a></li>
+            <li>
+              <a class="nav-link" href="adicional-noturno.html"
+                >Adicional Noturno</a
+              >
+            </li>
+            <li><a class="nav-link" href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="mt-5">
+      <!-- BreadCrumb -->
+      <nav aria-label="breadcrumb" class="ps-5">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">
+            <a href="termos-de-uso.html">Termos de Uso</a>
+          </li>
+        </ol>
+      </nav>
+    </header>
+    <div class="modal fade" id="meuModal" tabindex="-1">
+ <div class="modal-dialog p-0">
+    <div class="modal-content p-0 m-0">
+      <div class="modal-header m-0">
+        
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-justify lh-2 p-3 m-0">
+        <p>Estamos procurando sempre estar atualizando e corrigindo possiveis falhas em nossos cálculos e sistema, procurando entregar o que é de melhor ao nosso usuário. Caso tenha identificado alguma informação erronea ou erro de cálculo, não excite em nos informar para corrigirmos o quanto antes.</p>
+      </div>
+      <div class="modal-footer p-2 m-0">
+        <a href="contato.html" class="btn btn-danger">Informar falhas</a>
+      </div>
+    </div>
+  </div>
+    </div> 
+    <main class="text-center p-2">
+      <section class="text-justify text-justify p-2 text-md-justify p-3 mx-auto col-12 col-md-8 col-lg-6">
+        <header>
+          <h2 class="fw-bold text-center">Termos de Uso 📃</h2>
+        </header>
+        <article>
+            <br>
+            <p>Ao utilizar a plataforma The Calculator, você concorda com os termos abaixo:
+            <br>1. Finalidade da Plataforma:
+                A plataforma oferece ferramentas para cálculos trabalhistas estimativos, incluindo:
+                13º salário, Férias, FGTS, INSS, IRRF, Horas extras, Adicional noturno.
+            <br>2. Natureza Informativa:
+                Os cálculos apresentados são estimativas baseadas nos dados fornecidos pelo usuário.
+                Podem não refletir exatamente valores oficiais.
+                Não substituem orientação de contador, advogado ou profissional especializado.
+                A plataforma não se responsabiliza por decisões tomadas com base nos resultados apresentados.
+            <br>3. Responsabilidade do Usuário:
+                Inserir dados corretos, conferir as informações, utilizar os resultados apenas como referência.
+            <br>4. Propriedade Intelectual:
+                Todo o conteúdo do site, incluindo: Textos, Layout, Código e Design é protegido por direitos autorais,
+                sendo proibida sua reprodução sem autorização.
+            <br>5. Modificações:
+                A plataforma pode atualizar estes termos a qualquer momento, sendo recomendável sua revisão periódica.
+            </p>
+          </article>
+        </section>
+      </section>
+    
+    </main>
+
+    <footer class="text-md-justify p-3 mx-auto col-12 col-md-8 col-lg-6">
+      <!-- Footer -->
+      <section class="text-center">
+        <p>The Calculator by The Calculator<br />2025</p>
+      </section>
+    </footer>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var meuModal = new bootstrap.Modal(document.getElementById("meuModal"));
+    meuModal.show();
+  });
+</script>
+    <!-- Bundle Bootstrap 5.0 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
