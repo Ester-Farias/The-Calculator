@@ -87,7 +87,7 @@
                 <label class="form-label fw-bold m-0">Salário Bruto</label>
                   <div class="input-group input-group-sm">
                     <span class="input-group-text bg-danger">R$</span>
-                    <input id="salario_bruto" type="number" step="0.01" class="form-control bg-danger text-start" placeholder="1518,00" required/>
+                    <input id="salario_bruto" type="text" step="0.01" class="form-control bg-danger text-start" placeholder="1518,00" required/>
                   </div>
                   <div id="emailHelp" class="form-text text-start lh-1">Salário bruto é aquele que consta como registrado na CTPS, sem considerar os descontos legais como o INSS e IR.</div>
                 </div>
@@ -96,7 +96,7 @@
             <div class="col-md-6">
               <div class="mb-2">
                 <label class="form-label fw-bold m-0">Carga horária mensal</label>
-                <input id="carga_horaria_mensal" type="number" class="form-control form-control-sm bg-danger" aria-label="Default select example"   min="0" max="100" required>
+                <input id="carga_horaria_mensal" type="text" class="form-control form-control-sm bg-danger" aria-label="Default select example"   min="0" max="100" required>
                  <div id="emailHelp" class="form-text text-start lh-1">Informar a carga horária mensal de trabalho (se você não souber, basta multiplicar a quantidade de horas trabalhadas na semana por 5. Ex: 44h semanais equivalem a 220h mensais).</div>
            
              
@@ -105,7 +105,7 @@
             <div class="col-md-6">
               <div class="mb-2">
                 <label class="form-label fw-bold m-0">% da hora extra</label>
-                <input id="porcent_hora_extra" type="number" class="form-control form-control-sm bg-danger" aria-label="Default select example"   min="0" max="100" required>
+                <input id="porcent_hora_extra" type="text" class="form-control form-control-sm bg-danger" aria-label="Default select example"   min="0" max="100" required>
                  <div id="emailHelp" class="form-text text-start lh-1">Informar o % de Hora Extra que você quer calcular. Em dias normais o % mínimo é 50% e em Domingos e Feriados, 100%.</div>
            
              
@@ -114,7 +114,7 @@
             <div class="col-md-6">
               <div class="mb-2">
                 <label class="form-label fw-bold m-0">Quantidade de horas extras</label>
-                <input id="quantidade_horas_extras"   type="text" pattern="^([0-9]{1,2}):([0-5][0-9])$" placeholder="hh:mm" title="Formato válido: hh:mm" class="form-control form-control-sm bg-danger" aria-label="Default select example" required>
+                <input id="quantidade_horas_extras"   type="text" placeholder="hh:mm" title="Formato válido: hh:mm" class="form-control form-control-sm bg-danger" aria-label="Default select example" required>
                  <div id="emailHelp" class="form-text text-start lh-1">Informar a quantidade de Hora Extra que você quer calcular no formato hh:mm (horas:minutos).</div>
               </div>
             </div>
